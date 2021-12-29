@@ -1,0 +1,15 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+html,
+body {
+  height: 100%;
+  background: rgba(21, 23, 27, 1);
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+}
