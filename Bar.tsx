@@ -19,6 +19,8 @@ import { Bar as AntBar } from '@ant-design/charts';
 
 type Data = { type: string; count: number; content: string };
 
+const htmlFontSize = 100;
+
 const propsData = [
   {
     type: '连续不下说明书',
@@ -83,7 +85,7 @@ const Bar = () => {
         style: {
           textAlign: 'left', // 左边怼到柱上
           fill: 'rgba(255, 255, 255, 1)',
-          fontSize: 12,
+          fontSize: 0.12 * htmlFontSize, // 模拟 rem 项目，屏幕缩放重新计算 fontSize
         },
         offsetX: 10, // 往右偏移10像素
       };
