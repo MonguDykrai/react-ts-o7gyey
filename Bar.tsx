@@ -10,6 +10,7 @@
  * options.appendPadding —— 图表容器额外的 padding https://g2plot.antv.vision/zh/docs/api/plots/bar#appendpadding
  * options.autoFit —— 图表是否自适应容器宽高 https://g2plot.antv.vision/zh/docs/api/plots/bar#autofit
  * options.yAxis.top —— boolean 是否渲染在画布顶层，防止部分图形中，需要将 axis 显示在图形上面，避免被图形遮挡。 https://g2plot.antv.vision/zh/docs/api/plots/bar#top
+ * options.tooltip.domStyles —— 传入各个 dom 的样式 https://g2plot.antv.vision/zh/docs/api/plots/bar#domstyles
  */
 
 import React, { useState, useEffect } from 'react';
@@ -160,6 +161,14 @@ const Bar = () => {
     // color: ({ type }) => 'red', // 产品未进纸盒、连续不下盒...
     color: `l(0) 0:rgba(34, 41, 82, 1) 1:rgba(161, 116, 93, 1)`, // 指定柱的颜色
     annotations, // 图表标注
+    tooltip: {
+      // 覆盖 tooltip 样式
+      domStyles: {
+        'g2-tooltip': {
+          color: 'red',
+        },
+      },
+    },
   };
   return (
     <div style={{ height: '100%' }}>
